@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordedit | Web Designer And Developer</title>
+    <meta name="description" content="Premium full stack development portfolio showcasing modern web applications">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loader" id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Scroll to Top -->
+<div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar glass" id="navbar">
+    <div class="nav-container">
+        <span class="logo gradient-text">Accordedit</span>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-bg">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="hero-content">
+        <div class="profile-image">
+            <img src="../1.jpg" alt="My Profile Picture">
+        </div>
+        <h1 class="gradient-text" data-aos="fade-up">Accordedit</h1>
+        <div class="typing-text" data-aos="fade-up" data-aos-delay="100">
+            I'm a <span id="typed"></span>
+        </div>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+            I'm a multi-disciplinary creative and tech professional passionate about building impactful digital experiences. 
+            As a Graphic Designer, Software Engineer, Web Designer, and Developer, I combine creativity 
+            with technical expertise to create visually compelling designs and functional, user-focused solutions.
+            With experience in branding, UI/UX design, website development, and software engineering, I specialize in transforming 
+            ideas into modern digital products that are both aesthetically appealing and performance-driven.
+        </p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+            <button class="btn-primary" onclick="location.href='#projects'">View My Work</button>
+            <button class="btn-outline" onclick="window.open('/cv 1.pdf', '_blank')">Download CV</button>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2 class="section-title" data-aos="fade-up">About <span class="gradient-text">Me</span></h2>
+    <div class="section-divider"></div>
+    
+    <div class="about-grid">
+        <div data-aos="fade-right">
+            <div class="glass-card about-card">
+                <h3>Who Am I?</h3>
+                <p>Accord Edit is a creative and dynamic Graphic Designer, Software Engineer, Web Designer, and Full-Stack Developer with over 9 years of experience in building modern digital solutions that combine creativity, innovation, and functionality. Known for speed, brilliance, and unique design thinking, Accord Edit specializes in understanding clients deeply before bringing their vision to life.</p>
+                <p>I specialize in React, Node.js, and cloud technologies, combining technical excellence with creative design thinking.</p>
+                <div class="stats-mini">
+                    <div class="stat-mini glass">
+                        <div class="gradient-text">50+</div>
+                        <div>Projects</div>
+                    </div>
+                    <div class="stat-mini glass">
+                        <div class="gradient-text">30+</div>
+                        <div>Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-left">
+            <div class="service-grid-mini">
+                <div class="glass-card service-mini">
+                    <i class="fas fa-code"></i>
+                    <h4>Clean Code</h4>
+                </div>
+                <div class="glass-card service-mini">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Responsive</h4>
+                </div>
+                <div class="glass-card service-mini">
+                    <i class="fas fa-database"></i>
+                    <h4>Backend</h4>
+                </div>
+                <div class="glass-card service-mini">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Performance</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Dashboard -->
+<section>
+    <div class="stats-grid">
+        <div class="stat-card glass-card" data-aos="zoom-in">
+            <i class="fas fa-code"></i>
+            <div class="stat-number" id="statProjects">0</div>
+            <div>Projects Completed</div>
+        </div>
+        <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fas fa-users"></i>
+            <div class="stat-number" id="statClients">0</div>
+            <div>Happy Clients</div>
+        </div>
+        <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-rocket"></i>
+            <div class="stat-number" id="statCode">0</div>
+            <div>Lines of Code</div>
+        </div>
+        <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-coffee"></i>
+            <div class="stat-number" id="statCoffee">0</div>
+            <div>Coffee Consumed</div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2 class="section-title" data-aos="fade-up">Technical <span class="gradient-text">Skills</span></h2>
+    <div class="section-divider"></div>
+    
+    <div class="skills-container">
+        <div class="skill-item" data-aos="fade-up">
+            <div class="skill-header">
+                <span>React / Next.js</span>
+                <span>90%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+            </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-header">
+                <span>TypeScript</span>
+                <span>85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+            </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-header">
+                <span>Node.js / Express</span>
+                <span>88%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="88"></div>
+            </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-header">
+                <span>Python</span>
+                <span>80%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+            </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-header">
+                <span>MongoDB / PostgreSQL</span>
+                <span>85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+            </div>
+        </div>
+        <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-header">
+                <span>Tailwind CSS</span>
+                <span>92%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="92"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2 class="section-title" data-aos="fade-up">What I <span class="gradient-text">Offer</span></h2>
+    <div class="section-divider"></div>
+    
+    <div class="services-grid">
+        <div class="glass-card service-card" data-aos="fade-up">
+            <i class="fas fa-code"></i>
+            <h3>Web Development</h3>
+            <p>Custom responsive websites with modern frameworks</p>
+        </div>
+        <div class="glass-card service-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-server"></i>
+            <h3>Backend APIs</h3>
+            <p>Scalable RESTful and GraphQL APIs</p>
+        </div>
+        <div class="glass-card service-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud Solutions</h3>
+            <p>AWS, Vercel, Netlify deployment strategies</p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2 class="section-title" data-aos="fade-up">Featured <span class="gradient-text">Projects</span></h2>
+    <div class="section-divider"></div>
+    
+    <div class="filter-buttons" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+    </div>
+    
+    <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+    <h2 class="section-title" data-aos="fade-up">Work <span class="gradient-text">Experience</span></h2>
+    <div class="section-divider"></div>
+    
+    <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content glass-card">
+                <h3>Graphic Designer And Office Application Usage</h3>
+                <p class="timeline-date">ABAT TECHNOLOGIES | 2015-2018</p>
+                <p>System Operator And Trainer Of New Intakes.</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="timeline-content glass-card">
+                <h3>Freelance Web Developer</h3>
+                <p class="timeline-date">Self-employed | 2021 - Present</p>
+                <p>Built 20+ web applications for clients worldwide using MERN stack.</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="timeline-content glass-card">
+                <h3>LASIEC Lagos State Independent Electoral Commission</h3>
+                <p class="timeline-date">Contract 2026</p>
+                <p>Developed reusable React components, Manage Database Usage And Improve Web Features</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education">
+    <h2 class="section-title" data-aos="fade-up">My <span class="gradient-text">Education</span></h2>
+    <div class="section-divider"></div>
+    
+    <div class="education-grid">
+        <div class="glass-card education-card" data-aos="fade-up">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>B.Sc. Computer Science</h3>
+            <p class="edu-institution">Federal University Oye Ekiti | 2023 - 2026</p>
+            <p>GPA: 4.0 /5.0</p>
+        </div>
+        <div class="glass-card education-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-certificate"></i>
+            <h3>Full Stack Certificate</h3>
+            <p class="edu-institution">MIT xPRO | 2024</p>
+            <p>Distinction</p>
+        </div>
+    </div>
+</section>
+
+<!-- Terminal Section -->
+<section>
+    <div class="terminal" data-aos="flip-up">
+        <div class="terminal-header">
+            <div class="terminal-dot"></div>
+            <div class="terminal-dot"></div>
+            <div class="terminal-dot"></div>
+        </div>
+        <div class="terminal-body">
+            <div class="terminal-command">$ about --skills</div>
+            <div class="terminal-output" id="terminalOutput">React • Next.js • TypeScript • Node.js • Python • MongoDB</div>
+            <div class="terminal-command">$ contact --email</div>
+            <div class="terminal-output">fadareakorede905@gmail.com</div>
+            <div class="terminal-command">$ git --contributions</div>
+            <div class="terminal-output">500 commits this year • 7 repositories</div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2 class="section-title" data-aos="fade-up">Get In <span class="gradient-text">Touch</span></h2>
+    <div class="section-divider"></div>
+    
+    <div class="contact-grid">
+        <div data-aos="fade-right">
+            <div class="glass-card contact-info">
+                <h3>Let's Talk</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <span>fadareakorede905@gmail.com</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <span>+234 915 238 9430</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lagos, Nigeria</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/fadareakorede905-hub" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/AkoredeFad48297" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/acco.rdgraphics" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100088629705210" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-left">
+            <form class="glass-card contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" name="from_name" placeholder="Your Name" id="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="from_email" placeholder="Email Address" id="email" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" name="message" placeholder="Your Message" id="message" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Accordedit. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
